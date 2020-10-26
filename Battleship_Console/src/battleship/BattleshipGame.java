@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BattleshipGame {
 
     /**
-     * Method which runs the game.
+     * Method which basically runs the game.
      */
     static void startGame(){
         printRules();
