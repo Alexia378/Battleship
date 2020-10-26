@@ -1,5 +1,9 @@
 package battleship;
 
+/**
+ * class represents coordinates on the game field
+ */
+
 final class Coordinates {
     /**
      * Represents a row coordinate of the ship
@@ -11,14 +15,10 @@ final class Coordinates {
      */
     int column;
 
-    // Constructor
-
     public Coordinates(int row, int column){
         this.row = row;
         this.column = column;
     }
-
-    // Accessors
 
     /**
      * Get-accessor for getting row

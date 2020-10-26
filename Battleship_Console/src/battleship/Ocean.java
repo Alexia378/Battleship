@@ -1,5 +1,9 @@
 package battleship;
 
+/*
+  class represents game field
+ */
+
 import java.util.Random;
 
 class Ocean {
@@ -60,11 +64,10 @@ class Ocean {
      * @param s - current ship
      */
     void placeShip(Ship s) {
-        int row = 0;
-        int column = 0;
-        boolean horizontal = false;
+        int row;
+        int column;
+        boolean horizontal;
 
-        // try to generate such coordinates, where we can place ship
         do{
             horizontal = rand.nextBoolean();
 

@@ -1,7 +1,15 @@
 package battleship;
 
+/**
+ * class represents Ship with basic methods for
+ * all types of ships
+ */
+
 abstract class Ship {
 
+    /**
+     * constants of maximum and minimum coordinates on the field
+     */
     private static final int MAX_COORDINATE = 9;
     private static final int MIN_COORDINATE = 0;
 
@@ -35,7 +43,12 @@ abstract class Ship {
      */
     boolean[] hit = new boolean[4];
 
+    /**
+     * getter for array of hits for the ship
+     * @return array of hits
+     */
     public boolean[] getHit() { return hit; }
+
     /**
      * Returns the length of this particular ship
      * @return length of the ship
@@ -84,6 +97,13 @@ abstract class Ship {
      */
     String getShipType() {return "Ship"; }
 
+    /**
+     * method which helps to check if it's ok to place ship in this particular field
+     * @param row - row coordinate on the field
+     * @param column - column coordinate on the field
+     * @param ocean - game field
+     * @return true if it's ok to place ship here6 false otherwise
+     */
     boolean check(int row, int column, Ocean ocean){
         boolean ok = true;
         if(row >= MIN_COORDINATE && row <= MAX_COORDINATE &&
@@ -92,6 +112,7 @@ abstract class Ship {
 
         return ok;
     }
+
     /**
      * method checks if it's ok to place ship
      * @param row - row to place at
@@ -182,6 +203,10 @@ abstract class Ship {
         return sunk;
     }
 
+    /**
+     * returns simbol for ship if it's sunk or not for player's field
+     * @return X if sunk, S if not
+     */
     @Override
     public String toString(){
         if(this.isSunk())
